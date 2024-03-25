@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import Hook from "../Hook";
 import { useEffect, useState } from "react";
-import Tag from "./Tag";
 
 const ViewBookDetails = () => {
     const {data} = Hook();
@@ -19,9 +18,9 @@ const ViewBookDetails = () => {
     const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} = singleBooks || {};
 
     return (
-        <div className="flex justify-between gap-5">
+        <div className="flex justify-between gap-5 mt-[60px]">
            
-                <div className="bg-[#1313130D] p-7">
+                <div className="bg-[#1313130D] p-7 rounded-lg">
                     <img className="lg:h-[564px]" src={image} alt="" />
                 </div>
                 <div>

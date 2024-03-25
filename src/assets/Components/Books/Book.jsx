@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import Tag from "./Tag";
 import { GoStar } from "react-icons/go";
 
 const Book = ({cart}) => {
-    const {id,bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} = cart;
+    const {id,bookName,author,image,rating,category,tags} = cart;
     return (
         <Link to={`./viewBookDetails/${id}`}>
         <div className="card bg-base-100 shadow-xl">
