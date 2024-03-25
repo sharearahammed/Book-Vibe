@@ -5,6 +5,7 @@ import ListedBooks from "../ListedBooks/ListedBooks";
 import PageToRead from "../PageToRead/PageToRead";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
+import ViewBookDetails from "../Books/ViewBookDetails";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         {
             path:"/contact",
             element: <Contact></Contact>
+        },
+        {
+            path:"/viewBookDetails/:id",
+            element:<ViewBookDetails></ViewBookDetails>
         }
       ]
     },
