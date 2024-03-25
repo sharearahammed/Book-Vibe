@@ -50,14 +50,14 @@ const NAvBar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">BookVibe</a>
+    <a className="btn btn-ghost lg:text-xl">BookVibe</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
       {links}
     </ul>
   </div>
-  <div className="navbar-end flex gap-4">
+  <div className="navbar-end lg:flex lg:gap-4">
     <a className="btn bg-[#23BE0A] text-white">Sign In</a>
     <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
   </div>
