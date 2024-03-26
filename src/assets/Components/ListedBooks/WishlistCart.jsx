@@ -13,7 +13,7 @@ const WishlistCart = ({wishlist}) => {
             <div className="col-span-2">
                 <h1 className="mb-[16px] lg:text-[24px] font-bold">{bookName}</h1>
                 <p className="mb-[16px] text-[#131313CC]">By: {author}</p>
-                <p className="font-bold lg:mb-[16px] flex lg:gap-4 justify-center items-center lg:justify-normal">Tag {
+                <p className="font-bold lg:mb-[16px] flex lg:gap-4 justify-center items-center md:justify-normal lg:justify-normal">Tag {
                     tags && tags.map((tag,idx)=> <p className="bg-[#328EFF26] text-[#23BE0A] py-1 p-1 lg:px-3 rounded-3xl" key={idx}>#{tag}</p>)
                     }
                     <div className="flex items-center lg:gap-[8px] text-[#131313CC] font-light ">
