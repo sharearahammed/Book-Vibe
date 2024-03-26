@@ -6,11 +6,13 @@ import PageToRead from "../PageToRead/PageToRead";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 import ViewBookDetails from "../Books/ViewBookDetails";
+import ErrorPage from "../404/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
           path:"/",

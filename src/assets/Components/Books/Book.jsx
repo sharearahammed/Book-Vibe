@@ -7,15 +7,17 @@ const Book = ({cart}) => {
     const {id,bookName,author,image,rating,category,tags} = cart;
     return (
         <Link to={`./viewBookDetails/${id}`}>
-        <div className="card bg-base-100 shadow-xl">
-  <figure className="bg-[#F3F3F3] p-7"><img src={image} alt="Shoes" /></figure>
+        <div className="lg:w-[374px] lg:p-6 radious-lg border rounded-lg">
+
+        <div className="lg:h-[481px]">
+  <div className="bg-[#F3F3F3] p-7 rounded-lg flex justify-center"><img className="p-6 rounded-lg" src={image} alt="Shoes" /></div>
   <div className="card-body">
     <div className="text-[#23BE0A] flex gap-1">
         {
             tags.map((tag,idx)=> <Tag key={idx} tag={tag}></Tag>)
         }
     </div>
-    <h2 className="card-title font-bold">{bookName}</h2>
+    <h2 className="font-bold">{bookName}</h2>
     <p className="text-[16px] text-[#131313CC]">By : {author}</p>
     <hr className="border-dotted" />
     <div className="flex justify-between items-center text-[16px] text-[#131313CC]">
@@ -28,6 +30,8 @@ const Book = ({cart}) => {
 
   </div>
 </div>
+
+        </div>
         </Link>
     );
 };
