@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { saveReadBooks } from "../../Utilities/Utilities";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { saveWishListBooks } from "../../Utilities/wishlist";
+import { getWishListStoredBook, saveWishListBooks } from "../../Utilities/wishlist";
 
 const ViewBookDetails = () => {
     const {data} = Hook();
@@ -14,14 +14,25 @@ const ViewBookDetails = () => {
     const [singleBooks , setSingleBooks] = useState({});
     useEffect(()=>{
         const singleData = data.find(item=>item.id === intId);
-        console.log(singleData);
+        // console.log(singleData);
         setSingleBooks(singleData)
 
     },[data,intId])
 
     const handleRead = () =>{
-        saveReadBooks(intId);
+        const getWishList = getWishListStoredBook();
+        if(singleBooks.length > 0){
+            for(const id of getWishList){
+                const Readbook = saveReadBooks.find(saveRead=> saveRead.id === id);
+                console.log(Readbook);
+                
+            }
+            alert('wish list')
+        }
+        else{
+            saveReadBooks(intId);
         console.log('click');
+        }
     }
     const handleWishList =()=>{
         saveWishListBooks(intId);

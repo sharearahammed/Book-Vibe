@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Hook from "../Hook";
+import ReadBook from "./ReadBook";
+import WishListBook from "./WishListBook";
 
 const ListedBooks = () => {
-    const {data} = Hook();
+    // const {data} = Hook();
     const [tabIndex, setTabIndex] = useState(0);
     return (
         
@@ -17,11 +19,11 @@ const ListedBooks = () => {
         </TabList>
 
         <TabPanel>
-            <p>Read Books</p>
+            <ReadBook></ReadBook>
         </TabPanel>
         
         <TabPanel>
-            <p>Wishlist Books</p>
+            <WishListBook></WishListBook>
         </TabPanel>
         
       </Tabs>
