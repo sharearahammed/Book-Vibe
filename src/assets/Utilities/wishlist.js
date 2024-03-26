@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+import { getReadStoredBook } from "./Utilities";
 
 const getWishListStoredBook = () =>{
     const storedWishListBooks = localStorage.getItem('Wishlist-Books');
@@ -10,14 +11,16 @@ const getWishListStoredBook = () =>{
 
 const saveWishListBooks = id =>{
     const storedWishListBooks = getWishListStoredBook();
+    const storeReadListBooks = getReadStoredBook();
     const exists = storedWishListBooks.find(storedWishListBook => storedWishListBook === id);
-    if(!exists){
+    const ReadData = storeReadListBooks.find(storeReadListBook=>storeReadListBook === id)
+    if(!exists && !ReadData){
         storedWishListBooks.push(id)
         localStorage.setItem('Wishlist-Books', JSON.stringify(storedWishListBooks))
         toast.success("Wishlist added succesfully")
     }
     else{
-        toast.warn("Wishlist allready added")
+        toast.error("You have Already Read this Books")
     }
 }
 

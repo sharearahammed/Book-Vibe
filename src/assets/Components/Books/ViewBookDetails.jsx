@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Hook from "../Hook";
 import { useEffect, useState } from "react";
-import { saveReadBooks } from "../../Utilities/Utilities";
+import { getReadStoredBook, saveReadBooks } from "../../Utilities/Utilities";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { getWishListStoredBook, saveWishListBooks } from "../../Utilities/wishlist";
@@ -20,22 +20,13 @@ const ViewBookDetails = () => {
     },[data,intId])
 
     const handleRead = () =>{
-        const getWishList = getWishListStoredBook();
-        if(singleBooks.length > 0){
-            for(const id of getWishList){
-                const Readbook = saveReadBooks.find(saveRead=> saveRead.id === id);
-                console.log(Readbook);
-                
-            }
-            alert('wish list')
-        }
-        else{
-            saveReadBooks(intId);
-        console.log('click');
-        }
+        saveReadBooks(intId);
     }
+
+
     const handleWishList =()=>{
         saveWishListBooks(intId);
+        
     }
 
 

@@ -17,7 +17,7 @@ const saveReadBooks = id =>{
         toast.success("Read Book added succesfully")
     }
     else{
-        toast.warn("Read Book allready added")
+        toast.error("You have Already Read this Books")
     }
 }
 
