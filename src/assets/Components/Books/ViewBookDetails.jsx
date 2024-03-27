@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Hook from "../Hook";
 import { useEffect, useState } from "react";
 import { saveReadBooks } from "../../Utilities/Utilities";
@@ -10,6 +10,11 @@ const ViewBookDetails = () => {
     const {data} = Hook();
     const{id}=useParams();
     const intId = parseInt(id)
+
+    const navigate = useNavigate();
+    const handleclick = () =>{
+        navigate(-1);
+    }
 
     const [singleBooks , setSingleBooks] = useState({});
     useEffect(()=>{
@@ -33,14 +38,14 @@ const ViewBookDetails = () => {
     const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} = singleBooks || {};
 
     return (
-        <div className="flex flex-col lg:flex-row justify-between gap-5 mt-[60px] p-5 lg:p-0">
+        <div className="grid lg:grid-cols-2 mt-[60px] p-5 lg:p-10">
            
-                <div className="bg-[#1313130D] p-7 rounded-lg">
-                    <img className="lg:h-[564px]" src={image} alt="" />
+                <div className="lg:flex lg:justify-center lg:items-center bg-[#1313130D] p-7 lg:p-10 rounded-lg lg:w-[460px]">
+                    <img className="lg:h-[564px] lg:w-[700px]" src={image} alt="" />
                 </div>
                 <div>
                     <h1 className="mb-[16px] text-[20px] lg:text-[40px] font-bold">{bookName}</h1>
-                    <p className="mb-[23px] text-[15px] lg:text-[20px] text-[#131313CC]">By: {author}</p>
+                    <p className="mb-[23px] text-[15px] lg:text-[20px] text-[#131313CC] font-semibold">By: {author}</p>
                     <hr />
                     <p className="my-[16px] text-[15px] lg:text-[20px] text-[#131313CC]">{category}</p>
                     <hr />
@@ -74,8 +79,9 @@ const ViewBookDetails = () => {
                     
                     </div>
                     <div className="flex gap-5">
-                        <button onClick={()=>handleRead()} className="border px-5 py-3 rounded-lg font-bold">Read</button>
-                        <button onClick={()=>handleWishList()} className="bg-[#50B1C9] text-white py-3 px-7 rounded-lg font-bold">Wishlist</button>
+                        <button onClick={()=>handleRead()} className="hover:bg-emerald-200 border px-5 py-3 rounded-lg font-bold">Read</button>
+                        <button onClick={()=>handleWishList()} className="hover:bg-green-400 bg-[#50B1C9] text-white py-3 px-7 rounded-lg font-bold">Wishlist</button>
+                        <button onClick={()=>handleclick()} className="hover:bg-zinc-300 border px-5 py-3 rounded-lg font-bold">Go Back</button>
                     </div>
                 </div>
                 <ToastContainer />

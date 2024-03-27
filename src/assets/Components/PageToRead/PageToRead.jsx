@@ -24,7 +24,7 @@ const PageToRead = () => {
     // Create new data for the chart
     const readData = carts.map(cart => ({
         name: cart.bookName,
-        TotalPages: cart.totalPages,
+        Pages: cart.totalPages,
     }));
 
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -58,7 +58,7 @@ const PageToRead = () => {
                 <XAxis dataKey="name" angle={-11} interval={0} fontSize={10} textAnchor="end"/>
                 <YAxis/>
                 <Tooltip />
-                <Bar dataKey="TotalPages" fill="#8884d8" shape={<TriangleBar/>} label={{position: 'top'}}>
+                <Bar dataKey="Pages" fill="#8884d8" shape={<TriangleBar/>} label={{position: 'top'}}>
                     {colors.map((color, index) => (
                         <Cell key={`cell-${index}`} fill={color}/>
                     ))}

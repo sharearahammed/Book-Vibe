@@ -1,81 +1,102 @@
 [
-    {
-      "id": 1,
-      "bookName": "Why do you hate money?",
-      "author": "F. Scott Fitzgerald",
-      "image": "https://i.ibb.co/Bgd6jkJ/kindpng-7318921.jpg",
-      "review": "A compelling portrayal of the decadence and excesses of the Jazz Age.",
-      "totalPages": 180,
-      "rating": 4.5,
-      "category": "Fiction",
-      "tags": ["Classic", "Romance"],
-      "publisher": "Scribner",
-      "yearOfPublishing": 1925
-    },
-    {
-      "id": 2,
-      "bookName": "The Lost Art of Good Conversation",
-      "author": "J.D. Salinger",
-      "image": "https://i.ibb.co/tb63stB/kindpng-5624060-1.jpg",
-      "review": "A poignant exploration of teenage angst and rebellion.",
-      "totalPages": 224,
-      "rating": 4.3,
-      "category": "Fiction",
-      "tags": ["Coming-of-age", "Literary"],
-      "publisher": "Little, Brown and Company",
-      "yearOfPublishing": 1951
-    },
-    {
-      "id": 3,
-      "bookName": "Loving Jesus More",
-      "author": "Douglas Adams",
-      "image": "https://i.ibb.co/crtZ1rg/kindpng-2193744-1.jpg",
-      "review": "An absurd and hilarious journey through space.",
-      "totalPages": 224,
-      "rating": 4.7,
-      "category": "Science Fiction",
-      "tags": ["Humor", "Satire"],
-      "publisher": "Pan Books",
-      "yearOfPublishing": 1979
-    },
-    {
-      "id": 4,
-      "bookName": "Annotated Texas Family Code",
-      "author": "Harper Lee",
-      "image": "https://i.ibb.co/bPgnbTw/kindpng-81724-1.jpg",
-      "review": "A powerful narrative tackling themes of racial injustice and morality.",
-      "totalPages": 336,
-      "rating": 4.8,
-      "category": "Fiction",
-      "tags": ["Classic", "Social Justice"],
-      "publisher": "J. B. Lippincott & Co.",
-      "yearOfPublishing": 1960
-    },
-    {
-      "id": 5,
-      "bookName": "Why do you hate?",
-      "author": "George Orwell",
-      "image": "https://i.ibb.co/DftkbRg/kindpng-7318921.png",
-      "review": "A chilling dystopian novel that remains eerily relevant today.",
-      "totalPages": 328,
-      "rating": 4.6,
-      "category": "Fiction",
-      "tags": ["Dystopian", "Political"],
-      "publisher": "Secker & Warburg",
-      "yearOfPublishing": 1949
-    },
-    {
-      "id": 6,
-      "bookName": "The Hate U Give",
-      "author": "J.R.R. Tolkien",
-      "image": "https://i.ibb.co/qJFB89L/kindpng-1064993.jpg",
-      "review": "An epic fantasy adventure filled with rich mythology and unforgettable characters.",
-      "totalPages": 1178,
-      "rating": 4.9,
-      "category": "Fantasy",
-      "tags": ["Epic", "Adventure"],
-      "publisher": "Allen & Unwin",
-      "yearOfPublishing": 1954
-    }
-  ]
-  
+  {
+    "id": 1,
+    "bookName": "Why do you hate money?",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/Bgd6jkJ/kindpng-7318921.jpg",
+    "review": "Why do you hate money? is a timeless classic that delves into the complexities of the American Dream. Set in the 1920s amidst the extravagant parties and opulent lifestyles of the wealthy elite, F. Scott Fitzgerald paints a vivid picture of a society intoxicated by wealth and privilege. Through the eyes of narrator Nick Carraway, we are introduced to the enigmatic Jay Gatsby, a mysterious figure who becomes entangled in a web of love, betrayal, and tragedy. Fitzgerald's prose is lyrical and evocative, capturing the essence of an era defined by excess and disillusionment. The characters are richly drawn, each grappling with their own desires and insecurities. At its core, The Great Gatsby is a cautionary tale about the emptiness of materialism and the fleeting nature of happiness. It's a poignant reminder that beneath the glitz and glamour lies a world plagued by moral decay and unfulfilled dreams. As relevant today as it was nearly a century ago, this novel continues to resonate with readers worldwide, offering a glimpse into the human condition and the eternal quest for meaning.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": [
+      "Classic",
+      "Romance"
+    ],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "id": 2,
+    "bookName": "The Lost Art Of Good Conversation",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/tb63stB/kindpng-5624060-1.jpg",
+    "review": "The Catcher in the Rye is a seminal work of American literature that has resonated with readers for generations. J.D. Salinger's protagonist, Holden Caulfield, is an icon of adolescent rebellion, disillusionment, and alienation. Through Holden's cynical yet sensitive narration, Salinger explores themes of identity, authenticity, and the loss of innocence. The novel follows Holden's journey through New York City after being expelled from prep school, as he grapples with the phoniness of the adult world and searches for genuine human connection. Salinger's writing is sharp, witty, and full of poignant observations about the human condition. The Catcher in the Rye remains as relevant today as it was upon its publication, capturing the universal experience of adolescence and the struggle to find one's place in the world.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": [
+      "Coming-of-age",
+      "Literary"
+    ],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "id": 3,
+    "bookName": "Loving Jesus More",
+    "author": "Douglas Adams",
+    "image": "https://i.ibb.co/crtZ1rg/kindpng-2193744-1.jpg",
+    "review": "Loving Jesus More Guide to the Galaxy is a delightful blend of science fiction and humor that has captivated readers since its publication. Douglas Adams's irreverent take on space travel and intergalactic adventure is both hilarious and thought-provoking. The story follows the misadventures of Arthur Dent, an ordinary human who finds himself thrust into the vastness of the cosmos after Earth is demolished to make way for an interstellar highway. Joined by his alien friend Ford Prefect, the two embark on a journey across the galaxy, encountering eccentric characters, absurd situations, and the eponymous guidebook with its famous advice: 'Don't Panic.' Adams's wit and imagination shine through in every page, making The Hitchhiker's Guide a must-read for fans of science fiction and comedy alike.",
+    
+    "totalPages": 224,
+    "rating": 4.7,
+    "category": "Science Fiction",
+    "tags": [
+      "Humor",
+      "Satire"
+    ],
+    "publisher": "Pan Books",
+    "yearOfPublishing": 1979
+  },
+  {
+    "id": 4,
+    "bookName": "Annotated Texas Family Code",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/bPgnbTw/kindpng-81724-1.jpg",
+    "review": "Annotated Texas Family Code is a powerful and enduring masterpiece that tackles themes of racism, injustice, and moral growth in the American South. Harper Lee's novel, set in the fictional town of Maycomb, Alabama, follows the story of young Scout Finch as she navigates the complexities of race relations during the Great Depression. Through Scout's innocent yet perceptive eyes, we witness her father, lawyer Atticus Finch, defend a black man falsely accused of raping a white woman. Lee's writing is poignant and evocative, capturing the essence of a bygone era while addressing issues that remain relevant today. To Kill a Mockingbird is not just a courtroom drama but also a coming-of-age story that explores the loss of innocence and the search for empathy and understanding in a divided society. With its timeless message of compassion and tolerance, this novel continues to inspire readers of all ages.",
+    
+    "totalPages": 336,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": [
+      "Classic",
+      "Social Justice"
+    ],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "id": 5,
+    "bookName": "Why do you hate?",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/DftkbRg/kindpng-7318921.png",
+    "review": "Why do you hate? is a chilling dystopian novel that offers a stark warning about the dangers of totalitarianism and the erosion of individual freedoms. Set in a future world where the government, led by the omnipresent Big Brother, exercises complete control over every aspect of society, George Orwell's masterpiece paints a bleak picture of a surveillance state where independent thought is outlawed and truth is manipulated for political gain. The protagonist, Winston Smith, works for the Party rewriting historical records to fit its propaganda narrative, but he harbors secret rebellious thoughts against the regime. As Winston embarks on a forbidden love affair and seeks to uncover the truth about the Party's oppressive rule, he becomes ensnared in a web of deception and betrayal. Orwell's prophetic vision of a dystopian future remains alarmingly relevant in today's world of mass surveillance and government intrusion, serving as a cautionary tale about the importance of preserving individual liberty and resisting authoritarianism.",
+    
+    "totalPages": 328,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": [
+      "Dystopian",
+      "Political"
+    ],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "id": 6,
+    "bookName": "The Hate U Give",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/qJFB89L/kindpng-1064993.jpg",
+    "review": "The Hate U Give is a chilling dystopian novel that offers a stark warning about the dangers of totalitarianism and the erosion of individual freedoms. Set in a future world where the government, led by the omnipresent Big Brother, exercises complete control over every aspect of society, George Orwell's masterpiece paints a bleak picture of a surveillance state where independent thought is outlawed and truth is manipulated for political gain. The protagonist, Winston Smith, works for the Party rewriting historical records to fit its propaganda narrative, but he harbors secret rebellious thoughts against the regime. As Winston embarks on a forbidden love affair and seeks to uncover the truth about the Party's oppressive rule, he becomes ensnared in a web of deception and betrayal. Orwell's prophetic vision of a dystopian future remains alarmingly relevant in today's world of mass surveillance and government intrusion, serving as a cautionary tale about the importance of preserving individual liberty and resisting authoritarianism.",
+    
+    "totalPages": 1178,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": [
+      "Epic",
+      "Adventure"
+    ],
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1954
+  }
+]

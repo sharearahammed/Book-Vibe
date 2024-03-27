@@ -4,10 +4,14 @@ const Banner = () => {
     return (
         <div className="mt-4 lg:mt-[48px] rounded-2xl bg-[#1313130D] grid grid-cols-3 lg:p-10">
             <div className="col-span-2 flex flex-col justify-center items-center">
-                <h1 className="lg:mb-[48px] md:text-[30px] lg:text-[56px] font-bold">Books to freshen <br /> up your bookshelf</h1>
                 <div>
+                <div>
+                <h1 className="lg:mb-[48px] md:text-[30px] lg:text-[56px] font-bold">Books to freshen <br /> up your bookshelf</h1>
+                </div>
+                <div className="lg:pl-10">
                 <Link to={"./listedbooks"}>
-                <button className="bg-[#23BE0A] text-white md:text-[20px] lg:text-[20px] p-1 md:p-3 lg:py-3 lg:px-6 rounded-lg">View The List</button></Link>
+                <button className="bg-[#23BE0A] text-white text-[8px] md:text-[20px] lg:text-[20px] p-1 md:p-3 lg:py-3 lg:px-6 rounded-lg">View The List</button></Link>
+                </div>
                 </div>
                
             </div>

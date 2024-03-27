@@ -33,13 +33,14 @@ const About = () => {
             </p>
             </div>
 
-            <div className="mb-10 flex flex-col justify-center items-center">
-            <p className="mb-5">
-                <img className="rounded-lg lg:h-[300px] lg:w-[500px]" src="https://i.ibb.co/b2FP4Hy/thank-you.jpg" alt="" />
-            </p>
-            <p className="text-[#131313B3] text-lg text-center">
+            <div className="mb-10 grid lg:grid-cols-2 justify-center items-center">
+
+            <p className="text-[#131313B3] text-lg">
                 Thank you for choosing our bookstore. We look forward to sharing our love of books 
                 with you and helping you discover your next favorite story.
+            </p>
+            <p className="mb-5">
+                <img className="rounded-lg lg:h-[300px] lg:w-[500px]" src="https://i.ibb.co/b2FP4Hy/thank-you.jpg" alt="" />
             </p>
             
             </div>

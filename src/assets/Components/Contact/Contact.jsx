@@ -3,7 +3,7 @@ const Contact = () => {
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <figure>
         <img
-          className="h-[700px] w-[600px]"
+          className="h-[750px] w-[600px]"
           src="https://i.ibb.co/VLcwg6g/ashley-byrd-KVby0-S0-Ga-H4-unsplash.jpg"
           alt="Album"
         />

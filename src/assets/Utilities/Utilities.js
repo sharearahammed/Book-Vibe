@@ -14,7 +14,7 @@ const saveReadBooks = id =>{
     if(!exists){
         storedReadBooks.push(id)
         localStorage.setItem('Read-Books', JSON.stringify(storedReadBooks))
-        toast.success("Read Book added succesfully")
+        toast.success("Books Added to Read List")
     }
     else{
         toast.error("You have Already Read this Books")

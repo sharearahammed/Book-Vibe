@@ -213,7 +213,7 @@ const ListedBooks = () => {
 
         <TabPanel>
           {/* <ReadBook></ReadBook> */}
-          <div>
+          <div className="md:p-5 md:flex md:flex-col">
             <div className="mt-[32px] flex flex-col gap-[24px]">
               {showDisplayRead.map((readBook) => (
                 <ReadBookCart
@@ -227,7 +227,7 @@ const ListedBooks = () => {
 
         <TabPanel>
           {/* <WishListBook></WishListBook> */}
-          <div>
+          <div className="md:p-5 md:flex md:flex-col">
             <div className="mt-[32px] flex flex-col gap-[24px]">
               {showDisplayWish.map((wishlist) => (
                 <WishlistCart

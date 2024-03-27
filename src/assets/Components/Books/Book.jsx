@@ -7,7 +7,7 @@ const Book = ({cart}) => {
     const {id,bookName,author,image,rating,category,tags} = cart;
     return (
         <Link to={`./viewBookDetails/${id}`}>
-        <div className="lg:w-[374px] lg:p-6 radious-lg border rounded-lg">
+        <div className="transition-all duration-700 lg:hover:scale-105 lg:hover:border-blue-500 hover:shadow-2xl lg:w-[374px] lg:p-6 radious-lg border rounded-lg">
 
         <div className="lg:h-[481px]">
   <div className="bg-[#F3F3F3] p-7 rounded-lg flex justify-center"><img className="p-6 rounded-lg" src={image} alt="Shoes" /></div>
