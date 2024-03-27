@@ -3,8 +3,10 @@ import { IoPeople } from "react-icons/io5";
 import { MdContactPage } from "react-icons/md";
 import { FiMapPin } from "react-icons/fi";
 
+
+
 const ReadBookCart = ({readBook}) => {
-    const {bookName,author,image,review,totalPages,rating,category,tags,publisher,yearOfPublishing} = readBook;
+    const {bookName,author,image,totalPages,rating,category,tags,publisher,yearOfPublishing} = readBook;
     return (
         <div className="grid grid-col-1 lg:grid-cols-3 border lg:p-4  rounded-lg">
             <div className="flex flex-col lg:flex-row justify-center bg-[#1313130D] px-0 lg:py-5 rounded-lg lg:h-[229px] lg:w-[230px]">

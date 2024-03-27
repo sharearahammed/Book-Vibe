@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import Hook from "../Hook";
 import { useEffect, useState } from "react";
-import { getReadStoredBook, saveReadBooks } from "../../Utilities/Utilities";
+import { saveReadBooks } from "../../Utilities/Utilities";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { getWishListStoredBook, saveWishListBooks } from "../../Utilities/wishlist";
+import { saveWishListBooks } from "../../Utilities/wishlist";
 
 const ViewBookDetails = () => {
     const {data} = Hook();

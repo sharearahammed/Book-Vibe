@@ -1,13 +1,12 @@
-import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+/* eslint-disable react/prop-types */
+import {Tooltip, BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
 import Hook from '../Hook';
-import useReadCartHook from '../useReadCartHook';
 import { useEffect, useState } from 'react';
 import { getReadStoredBook } from '../../Utilities/Utilities';
 
 const PageToRead = () => {
     const {data: allData} = Hook();
-    const {localData} = useReadCartHook();
+
 
     const [carts, setCarts] = useState([]);
     useEffect(() => {
@@ -25,7 +24,7 @@ const PageToRead = () => {
     // Create new data for the chart
     const readData = carts.map(cart => ({
         name: cart.bookName,
-        uv: cart.totalPages,
+        TotalPages: cart.totalPages,
     }));
 
     const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -58,7 +57,8 @@ const PageToRead = () => {
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="name" angle={-11} interval={0} fontSize={10} textAnchor="end"/>
                 <YAxis/>
-                <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar/>} label={{position: 'top'}}>
+                <Tooltip />
+                <Bar dataKey="TotalPages" fill="#8884d8" shape={<TriangleBar/>} label={{position: 'top'}}>
                     {colors.map((color, index) => (
                         <Cell key={`cell-${index}`} fill={color}/>
                     ))}

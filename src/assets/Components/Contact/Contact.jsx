@@ -10,7 +10,7 @@ const Contact = () => {
       </figure>
       <div className="card-body">
         <h2 className="text-3xl card-title">Get in Touch</h2>
-        <p>Welcome to Book Vibe, where stories come alive! Whether you're seeking literary <br/> adventures, educational resources, or simply a cozy reading nook, we're here to <br/> serve your bibliophilic needs. Have a question,suggestion, or just want to say hello?<br/> Drop us a line using the form below, or connect with us via phone or email. We love<br/>  hearing from fellow book enthusiasts like you!</p>
+        <p>Welcome to Book Vibe, where stories come alive! Whether you are seeking literary <br/> adventures, educational resources, or simply a cozy reading nook, we are here to <br/> serve your bibliophilic needs. Have a question,suggestion, or just want to say hello?<br/> Drop us a line using the form below, or connect with us via phone or email. We love<br/>  hearing from fellow book enthusiasts like you!</p>
 
         <div className="overflow-x-auto">
   <table className="table">
