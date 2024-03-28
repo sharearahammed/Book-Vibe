@@ -57,7 +57,7 @@ const NAvBar = () => {
       {links}
     </ul>
   </div>
-  <div className="md:navbar-end lg:navbar-end lg:flex lg:gap-4">
+  <div className="navbar-end md:navbar-end lg:navbar-end lg:flex lg:gap-4">
     <a className="btn bg-[#23BE0A] text-white text-[8px] lg:text-[14px]">Sign In</a>
     <a className="btn bg-[#59C6D2] text-white text-[8px] lg:text-[14px]">Sign Up</a>
   </div>

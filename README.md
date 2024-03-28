@@ -4,7 +4,7 @@ Welcome to My Book Vibe Website!
 
 ## Live Site
 
-You can visit the live site [here](https://verdant-fox-4658c5.netlify.app/).
+You can visit the live site [here](https://verdant-fox-4658c5.netlify.app).
 
 ## Features and Characteristics
 

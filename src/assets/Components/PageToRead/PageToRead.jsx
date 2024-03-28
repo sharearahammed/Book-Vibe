@@ -5,21 +5,21 @@ import { useEffect, useState } from 'react';
 import { getReadStoredBook } from '../../Utilities/Utilities';
 
 const PageToRead = () => {
-    const {data: allData} = Hook();
+    const {data} = Hook(); // eikhane niche data name arekta 
 
 
     const [carts, setCarts] = useState([]);
     useEffect(() => {
         const saveRead = getReadStoredBook();
-        if (allData.length > 0) {
+        if (data.length > 0) {
             const newRead = [];
             for (const id of saveRead) {
-                const newData = allData.find(all => all.id === id);
+                const newData = data.find(all => all.id === id);
                 newRead.push(newData);
             }
             setCarts(newRead);
         }
-    }, [allData]);
+    }, [data]);
 
     // Create new data for the chart
     const readData = carts.map(cart => ({
