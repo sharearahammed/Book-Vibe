@@ -9,14 +9,16 @@ import { getReadStoredBook } from "../../Utilities/Utilities";
 import ReadBookCart from "./ReadBookCart";
 import { getWishListStoredBook } from "../../Utilities/wishlist";
 import WishlistCart from "./WishlistCart";
+import { Helmet } from "react-helmet-async";
 
 const ListedBooks = () => {
   const { data } = Hook();
   // console.log(data)
   const [showDisplayRead, setDisplayShowRead] = useState([]);
   const [showDisplayWish, setDisplayShowWish] = useState([]);
+  const [tabIndex, setTabIndex] = useState(0);
 
-  // .......................Handle Read List................................
+  // .......................Handle Read List Function Start................................
   const handleClick = () => {
     setDisplayShowRead(readBooks);
   };
@@ -67,7 +69,9 @@ const ListedBooks = () => {
     console.log(publishYear);
   };
 
-  // .....................................Hanndle Wish List...............................
+  // .......................Handle Read List Function End................................
+
+  // .....................................Hanndle Wish List Function Start...............................
   const handleClickWish = () => {
     setDisplayShowWish(wishListBooks);
   };
@@ -114,9 +118,9 @@ const ListedBooks = () => {
     );
     setDisplayShowWish(publishYear);
   };
+  // .....................................Hanndle Wish List Function End...............................
 
-  const [tabIndex, setTabIndex] = useState(0);
-  // ............................................ReadBook............................................
+  // ............................................ReadBook Start............................................
   const [readBooks, setReadBooks] = useState([]);
   // const [displayBooks,setDisplayBooks] = useState([]);
 
@@ -134,8 +138,9 @@ const ListedBooks = () => {
       setDisplayShowRead(newStoredReadBook);
     }
   }, [data]);
+  // ..........................................ReadBook End..............................................
 
-  // ............................................WishList............................................
+  // ............................................WishList Start............................................
 
   const [wishListBooks, setWishListBooks] = useState([]);
   useEffect(() => {
@@ -152,9 +157,15 @@ const ListedBooks = () => {
       setDisplayShowWish(newStoredWishListBook);
     }
   }, [data]);
+  // ..............................................WishList End.......................................
 
   return (
     <div className="mt-[36px] ">
+      <Helmet>
+        <title>Book Vibe List of Books</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
+
       <h1 className="mb-[32px] bg-[#1313130D] py-[20px] rounded-lg text-center text-[28px] font-bold">
         Books
       </h1>

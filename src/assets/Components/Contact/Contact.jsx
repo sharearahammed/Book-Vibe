@@ -1,6 +1,12 @@
+import { Helmet } from "react-helmet-async";
+
 const Contact = () => {
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
+      <Helmet>
+        <title>Book Vibe Contact</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <figure>
         <img
           className="h-[750px] w-[600px]"
