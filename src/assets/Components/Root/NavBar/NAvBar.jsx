@@ -1,6 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Authconfiguration/AuthConfiguration";
 
 const NAvBar = () => {
+  const {user,logOut} = useContext(AuthContext);
+  const logout = () =>{
+    logOut()
+    .then()
+    .catch(error=>{
+      console.log(error.message)
+    })
+  }
     const links = 
     <>
     <li><NavLink className={({ isActive, isPending }) =>
@@ -58,8 +68,11 @@ const NAvBar = () => {
     </ul>
   </div>
   <div className="navbar-end md:navbar-end lg:navbar-end lg:flex lg:gap-4">
-    <a className="btn bg-[#23BE0A] text-white text-[8px] lg:text-[14px]">Sign In</a>
-    <a className="btn bg-[#59C6D2] text-white text-[8px] lg:text-[14px]">Sign Up</a>
+    {
+      user ? <button onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">Sign Out</button>
+      : <Link to={'/login'}><a className="btn bg-[#23BE0A] text-white text-[8px] lg:text-[14px]">Sign In</a></Link>
+    }
+    <Link to={'/register'}><a className="btn bg-[#59C6D2] text-white text-[8px] lg:text-[14px]">Sign Up</a></Link>
   </div>
 </div>
     );

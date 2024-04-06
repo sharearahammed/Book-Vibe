@@ -7,6 +7,9 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 import ViewBookDetails from "../Books/ViewBookDetails";
 import ErrorPage from "../404/ErrorPage";
+import Login from "../Login/Login";
+import Register from "../Register/Register";
+import PrivatePortes from "../PrivatePortes/PrivatePortes";
 
 const router = createBrowserRouter([
     {
@@ -20,11 +23,11 @@ const router = createBrowserRouter([
         },
         {
             path:"/listedbooks",
-            element: <ListedBooks></ListedBooks>
+            element: <PrivatePortes><ListedBooks></ListedBooks></PrivatePortes> 
         },
         {
             path:"/pagetoread",
-            element: <PageToRead></PageToRead>
+            element: <PrivatePortes><PageToRead></PageToRead></PrivatePortes>
         },
         {
             path:"/about",
@@ -37,6 +40,14 @@ const router = createBrowserRouter([
         {
             path:"/viewBookDetails/:id",
             element:<ViewBookDetails></ViewBookDetails>
+        },
+        {
+          path:'/login',
+          element:<Login></Login>
+        },
+        {
+          path:'/register',
+          element:<Register></Register>
         }
       ]
     },

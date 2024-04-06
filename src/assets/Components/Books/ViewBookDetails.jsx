@@ -1,13 +1,15 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Hook from "../Hook";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { saveReadBooks } from "../../Utilities/Utilities";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { saveWishListBooks } from "../../Utilities/wishlist";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../Authconfiguration/AuthConfiguration";
 
 const ViewBookDetails = () => {
+  const {user} = useContext(AuthContext)
   const { data } = Hook();
   const { id } = useParams();
   const intId = parseInt(id);
@@ -105,18 +107,38 @@ const ViewBookDetails = () => {
           </div>
         </div>
         <div className="flex gap-5">
-          <button
+          {
+            user ? <button
             onClick={() => handleRead()}
             className="hover:bg-emerald-200 border px-5 py-3 rounded-lg font-bold"
           >
             Read
           </button>
+          :
+          <Link to={'/login'}>
           <button
+            className="hover:bg-emerald-200 border px-5 py-3 rounded-lg font-bold"
+          >
+            Read
+          </button>
+          </Link>
+          }
+          {
+            user ? <button
             onClick={() => handleWishList()}
             className="hover:bg-green-400 bg-[#50B1C9] text-white py-3 px-7 rounded-lg font-bold"
           >
             Wishlist
           </button>
+          :
+          <Link to={'/login'}>
+          <button
+            className="hover:bg-green-400 bg-[#50B1C9] text-white py-3 px-7 rounded-lg font-bold"
+          >
+            Wishlist
+          </button>
+          </Link>
+          }
           <button
             onClick={() => handleclick()}
             className="hover:bg-zinc-300 border px-5 py-3 rounded-lg font-bold"
