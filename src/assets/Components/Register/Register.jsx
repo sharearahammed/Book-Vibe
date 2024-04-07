@@ -1,19 +1,30 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authconfiguration/AuthConfiguration";
+import { sendEmailVerification, updateProfile } from "firebase/auth";
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser,logOut} = useContext(AuthContext)
     const [success , setSuccess] = useState('');
     const [error , setError] = useState('');
 
+    const handleLogout = () =>{
+      logOut()
+      .then()
+    .catch(error=>{
+      console.log(error.message)
+    })
+    }
+
     const handleSignup = e =>{
         e.preventDefault();
+        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const cpassword = e.target.cpassword.value;
         const accepcted = e.target.terms.checked;
-        console.log(email,password,cpassword,accepcted)
+        const upload = e.target.upload.value;
+        console.log(name,email,password,cpassword,upload,accepcted)
 
         // reset error
         setError('')
@@ -39,6 +50,19 @@ const Register = () => {
         .then(result =>{
             console.log(result.user)
             setSuccess('User Created Successfully')
+            // Update profile
+            updateProfile(result.user,{
+              displayName: name,
+              photoURL: upload
+          })
+          .then(()=> console.log('profile updated'))
+          .catch()
+
+          // send verification email:
+          sendEmailVerification(result.user)
+          .then(()=>{
+              alert('Please check your email and verify your account')
+          })
         })
         .catch(error=>{
             console.error(error.meggase)
@@ -55,6 +79,10 @@ const Register = () => {
         <form onSubmit={handleSignup}>
           <div className="space-y-6">
             <div>
+              <label className="text-sm mb-2 block">Name</label>
+              <input name="name" type="text" className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" placeholder="Enter name" />
+            </div>
+            <div>
               <label className="text-sm mb-2 block">Email</label>
               <input name="email" type="text" className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" placeholder="Enter email" />
             </div>
@@ -65,6 +93,10 @@ const Register = () => {
             <div>
               <label className="text-sm mb-2 block">Confirm Password</label>
               <input name="cpassword" type="password" className="bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" placeholder="Enter confirm password" />
+            </div>
+            <div>
+              <label className="text-sm mb-2 block">Upload your Photo</label>
+              <input name="upload" type="file" className="bg-white w-full text-sm px-4 py-3 rounded-md outline-blue-500" />
             </div>
             <div className="flex items-center">
               <input id="remember-me" name="terms" type="checkbox" className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />

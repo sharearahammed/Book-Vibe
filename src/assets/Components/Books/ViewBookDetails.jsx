@@ -8,6 +8,7 @@ import { saveWishListBooks } from "../../Utilities/wishlist";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../Authconfiguration/AuthConfiguration";
 
+
 const ViewBookDetails = () => {
   const {user} = useContext(AuthContext)
   const { data } = Hook();

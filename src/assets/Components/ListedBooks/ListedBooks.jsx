@@ -25,28 +25,28 @@ const ListedBooks = () => {
 
   const handleRating = () => {
     const storeRead = getReadStoredBook();
-    const newStoredWishListBook = [];
+    const newStoredReadListBook = [];
     for (const id of storeRead) {
       const book = data.find((item) => item.id === id);
       if (book) {
-        newStoredWishListBook.push(book);
+        newStoredReadListBook.push(book);
       }
     }
-    const ratings = newStoredWishListBook.sort((a, b) => b.rating - a.rating);
+    const ratings = newStoredReadListBook.sort((a, b) => b.rating - a.rating);
     setDisplayShowRead(ratings);
     console.log(ratings);
   };
 
   const handleNumberOfPages = () => {
     const storeRead = getReadStoredBook();
-    const newStoredWishListBook = [];
+    const newStoredReadListBook = [];
     for (const id of storeRead) {
       const book = data.find((item) => item.id === id);
       if (book) {
-        newStoredWishListBook.push(book);
+        newStoredReadListBook.push(book);
       }
     }
-    const numberOfPages = newStoredWishListBook.sort(
+    const numberOfPages = newStoredReadListBook.sort(
       (a, b) => b.totalPages - a.totalPages
     );
     setDisplayShowRead(numberOfPages);
@@ -55,14 +55,14 @@ const ListedBooks = () => {
 
   const handlePublishYear = () => {
     const storeRead = getReadStoredBook();
-    const newStoredWishListBook = [];
+    const newStoredReadListBook = [];
     for (const id of storeRead) {
       const book = data.find((item) => item.id === id);
       if (book) {
-        newStoredWishListBook.push(book);
+        newStoredReadListBook.push(book);
       }
     }
-    const publishYear = newStoredWishListBook.sort(
+    const publishYear = newStoredReadListBook.sort(
       (a, b) => b.yearOfPublishing - a.yearOfPublishing
     );
     setDisplayShowRead(publishYear);

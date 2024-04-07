@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         },
         {
             path:"/viewBookDetails/:id",
-            element:<ViewBookDetails></ViewBookDetails>
+            element:<PrivatePortes><ViewBookDetails></ViewBookDetails></PrivatePortes> 
         },
         {
           path:'/login',

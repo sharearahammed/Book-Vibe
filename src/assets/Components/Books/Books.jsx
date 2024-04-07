@@ -2,7 +2,7 @@ import Hook from "../Hook";
 import Book from "./Book";
 
 const Books = () => {
-    const {data,loading} = Hook();
+    const {data} = Hook();
     return (
         <div className="ml-5 mr-5 mt-10 lg:mt-[100px]">
             <h1 className="mb-8 lg:mb-[36px] text-[20px] md:text-[30px] lg:text-[40px] font-bold text-center">Books</h1>

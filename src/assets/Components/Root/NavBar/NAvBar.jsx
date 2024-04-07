@@ -20,7 +20,9 @@ const NAvBar = () => {
                         ? "pending"
                         : ""
                     } to={"./"}>Home</NavLink></li>
-    <li><NavLink className={({ isActive, isPending }) =>
+{
+  user && <>
+      <li><NavLink className={({ isActive, isPending }) =>
                       isActive
                         ? "text-[#23BE0A] border border-[#23BE0A]"
                         : isPending
@@ -34,6 +36,8 @@ const NAvBar = () => {
                         ? "pending"
                         : ""
                     } to={"./pagetoread"}>Pages to Read</NavLink></li>
+  </>
+}
     <li><NavLink className={({ isActive, isPending }) =>
                       isActive
                         ? "text-[#23BE0A] border border-[#23BE0A]"
@@ -60,7 +64,7 @@ const NAvBar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost lg:text-xl">BookVibe</a>
+    <Link to={'/'} className="btn btn-ghost lg:text-3xl lg:font-bold">BookVibe</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -69,7 +73,9 @@ const NAvBar = () => {
   </div>
   <div className="navbar-end md:navbar-end lg:navbar-end lg:flex lg:gap-4">
     {
-      user ? <button onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">Sign Out</button>
+      user ? <div className="flex items-center">
+        <p>{user.email}</p>
+        <p><button onClick={logout} className="btn bg-red-600 text-white text-[8px] lg:text-[14px]">Sign Out</button></p></div>
       : <Link to={'/login'}><a className="btn bg-[#23BE0A] text-white text-[8px] lg:text-[14px]">Sign In</a></Link>
     }
     <Link to={'/register'}><a className="btn bg-[#59C6D2] text-white text-[8px] lg:text-[14px]">Sign Up</a></Link>
